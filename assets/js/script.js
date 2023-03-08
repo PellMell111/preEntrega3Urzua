@@ -8,13 +8,14 @@ botonRectangulo.onclick = () => {document.getElementById("seleccionFigura").inne
     </form>
     <div id="displayResultado"></div>`};
 
-let alto = document.getElementById("alto").value;
-let ancho = document.getElementById("ancho").value;
-
-let area = alto * ancho
-
 let calcularRectangulo = document.getElementById("submitRectangulo");
-calcularRectangulo.onclick = () => {document.getElementById("displayResultado").innerHTML = `<p>${area}</p>`}
+
+calcularRectangulo.onclick = () => {
+    let alto = document.getElementById("alto").value;
+    let ancho = document.getElementById("ancho").value;
+
+    let area = alto * ancho;
+    document.getElementById("displayResultado").innerHTML = `<p>${area} cm²</p>`}
 
 let botonCirculo = document.getElementById("seleccionCirculo");
 botonCirculo.onclick = () => {document.getElementById("seleccionFigura").innerHTML = `
